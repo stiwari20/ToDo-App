@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./Todo.css";
+import { v4 as uuidv4 } from "uuid";
 
 const Todo = () => {
-  const [arr, setArr] = useState(["sample task"]);
+  const [arr, setArr] = useState([{ name: "Sample task", id: uuidv4() }]);
   const [newTask, setTask] = useState("");
 
   const updateTask = (event) => {
@@ -18,8 +19,7 @@ const Todo = () => {
 
   return (
     <>
-      {/* <div className="container inp-container border text-center d-flex flex-column"> */}
-      <div className="container border inp-container text-center">
+      <div className="container inp-container text-center">
         <div className=" my-2">
           <h1 className="heading">Your Daily Todo List</h1>
         </div>
@@ -43,7 +43,7 @@ const Todo = () => {
             </button>
           </div>
           {arr.map((task) => {
-            return <li>{task}</li>;
+            return <li key={task.id}>{task.name}</li>;
           })}
         </div>
       </div>

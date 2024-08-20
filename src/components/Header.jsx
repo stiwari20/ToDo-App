@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.css";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -9,9 +10,9 @@ const Header = () => {
         data-bs-theme="dark"
       >
         <div className="container-fluid">
-          <a className="navbar-brand brand p-2" href="/todo">
+          <NavLink className="navbar-brand brand p-2" to="/">
             ToDo App
-          </a>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -29,48 +30,24 @@ const Header = () => {
           >
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active p-2" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link p-2" href="#">
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link p-2 me-5" href="#">
-                  Contact
-                </a>
-              </li>
-              {/* <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                <NavLink
+                  className="nav-link p-2"
+                  aria-current="page"
+                  to="/home"
                 >
-                  Dropdown link
-                </a> */}
-              {/* <ul className="dropdown-menu">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Something else here
-                    </a>
-                  </li>
-                </ul> */}
-              {/* </li> */}
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link p-2" to="/about">
+                  About
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link p-2 me-5" to="/contact">
+                  Contact
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>

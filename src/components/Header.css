@@ -1,4 +1,4 @@
-a:hover {
+.nav-link:hover {
   background: linear-gradient(to right, #f97316, #ec4899);
   border-radius: 35px;
 }
