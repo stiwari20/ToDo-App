@@ -1,0 +1,15 @@
+heading {
+  color: #f55cfa;
+}
+
+.inp-container {
+  min-height: 500px;
+}
+
+.btn {
+  margin-left: 1rem;
+}
+
+.todo-area {
+  min-height: 450px;
+}
