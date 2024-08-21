@@ -13,7 +13,6 @@ const Footer = () => {
           className="git-logo"
           target="_blank"
         >
-          {/* <FontAwesomeIcon icon={faTrash} /> */}
           <FontAwesomeIcon icon={faGithub} />
         </a>
         <p className="pt-2">All Rights Reservsed.&copy;</p>

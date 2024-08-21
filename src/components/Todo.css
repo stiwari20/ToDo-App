@@ -13,3 +13,7 @@ heading {
 .todo-area {
   min-height: 450px;
 }
+
+.todo-container {
+  width: 30%;
+}
